@@ -11,7 +11,7 @@ const MovieList = (props) => {
 					<img src={movie.Poster} alt='movie'></img>
                     <div 
                         // adding function from props and adding onClick property
-                        onClick={() => props.handleFavoritesClick(movie)}
+                        onClick={() => this.props.handleFavoritesClick(movie)}
                         className='overlay d-flex align-items-center justify-content-center'>
 						<FavoriteComponent/>
 					</div>

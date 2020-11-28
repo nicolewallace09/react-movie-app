@@ -28,12 +28,12 @@ const App = () => {
     getMovieRequest(searchValue); 
   }, [searchValue]); 
   // retrieving favorites from localStorage when app loads and setting to state 
-  // useEffect(() => {
-  //   const movieFavorites = JSON.parse(
-  //     localStorage.getItem('react-movie-app-favorites')
-  //   ); 
-  //   setFavorites(movieFavorites); 
-  // }, []); 
+  useEffect(() => {
+    const movieFavorites = JSON.parse(
+      localStorage.getItem('react-movie-app-favorites')
+    ); 
+    setFavorites(movieFavorites); 
+  }, []); 
   // saving to localStorage to remain when page loads 
   const saveToLocalStorage = (items) => {
     localStorage.setItem('react-movie-app-favorites', JSON.stringify(items));
