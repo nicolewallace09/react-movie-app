@@ -10,6 +10,7 @@ const SearchBox = (props) => {
 				placeholder='Type to search...'
 			></input>
 		</div>
+	
 	);
 };
 

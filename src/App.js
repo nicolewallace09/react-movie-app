@@ -14,7 +14,9 @@ const App = () => {
   const [searchValue, setSearchValue] = useState('');
   // calling OMDb API -- searchValue as a parameter 
   const getMovieRequest = async (searchValue) => {
-    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=50241c2`;
+    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=50241c2`; // original
+    // const url = `https://api.themoviedb.org/3/search/movie?api_key=7b642aed2489a8f6bfc80d04a2421e1c&language=en-US&query=${searchValue}&page=1&include_adult=false`;
+
 
     const response = await fetch(url); 
     const responseJson = await response.json(); 
@@ -27,6 +29,7 @@ const App = () => {
   useEffect(() => {
     getMovieRequest(searchValue); 
   }, [searchValue]); 
+
   // retrieving favorites from localStorage when app loads and setting to state 
   useEffect(() => {
     const movieFavorites = JSON.parse(
@@ -34,16 +37,19 @@ const App = () => {
     ); 
     setFavorites(movieFavorites); 
   }, []); 
+
   // saving to localStorage to remain when page loads 
   const saveToLocalStorage = (items) => {
     localStorage.setItem('react-movie-app-favorites', JSON.stringify(items));
   };
+
   // accepts a movie, takes in the current favorites array, copies it, and adds the new movie and saves back into state 
   const addFavoriteMovie = (movie) => {
     const newFavoriteList = [...favorites, movie]; 
     setFavorites(newFavoriteList);
     saveToLocalStorage(newFavoriteList); 
   };
+
   // remove a given movie from favorite state by filtering ID returning new favorites array
   const removeFavoriteMovie = (movie) => {
     const newFavoriteList = favorites.filter(
@@ -52,9 +58,12 @@ const App = () => {
     setFavorites(newFavoriteList); 
     saveToLocalStorage(newFavoriteList); 
   };
-
 	
 	return (
+    <>
+    <div className="container">
+      <h1 className="app-title">React Movie Search</h1>
+    </div>
 		<div className='container-fluid movie-app'>
 			<div className='row d-flex align-items-center mt-4 mb-4'>
 				<MovieListHeading heading='Movies' />
@@ -67,7 +76,7 @@ const App = () => {
           handleFavoritesClick={addFavoriteMovie}/>
 			</div>
       <div className='row d-flex align-items-center mt-4 mb-4'>
-				<MovieListHeading heading='Favorites' />
+				<MovieListHeading heading='Watch List' />
 			</div>
 			<div className='row'>
         <MovieList 
@@ -76,6 +85,7 @@ const App = () => {
           favoriteComponent={RemoveFavorites} /> 
 			</div>
 		</div>
+    </>
 	);
 };
 

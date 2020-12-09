@@ -1,17 +1,22 @@
 body {
-  background: #141414;
-  color: #ffffff;
+	background: #141414;
+	color: #ffffff;
+}
+
+p {
+	color: black; 
+	align-items: center;
 }
 
 .movie-app > .row {
-  overflow-x: auto;
-  flex-wrap: nowrap;
+	overflow-x: auto;
+	flex-wrap: nowrap;
 }
 
 /* Hover & Zoom */
 
 .image-container {
-	position: relative;
+	/* position: relative; */
 	transition: transform 0.2s;
 }
 
@@ -27,11 +32,39 @@ body {
 .overlay {
 	position: absolute;
 	background: rgba(0, 0, 0, 0.8);
-	width: 100%;
+	width: 15rem;
 	transition: 0.5s ease;
 	opacity: 0;
 	bottom: 0;
-	font-size: 20px;
+	font-size: 15px;
 	padding: 20px;
 	text-align: center;
 }
+
+.movie-container {
+	padding: 1rem 2rem; 
+	border-radius: 50px;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+	margin-bottom: 1rem;
+	background-color: white;
+	margin-right: 1rem;
+	margin-left: 1rem;
+}
+
+img {
+	width: 15rem;
+	height: 25rem;
+}
+
+.container {
+	margin: 0 auto; 
+	max-width: 1000px;
+	padding: 40px;
+}
+  
+.app-title {
+	font-size: 4.4rem;
+	text-align: center;
+}
+
+
