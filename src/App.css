@@ -58,6 +58,9 @@ p {
 img {
 	width: 15rem;
 	height: 25rem;
+	align-items: center;
+	margin: auto;
+	border: 1px solid red;
 }
 
 .app-container {
