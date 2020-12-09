@@ -4,11 +4,11 @@ const MovieList = (props) => {
     const FavoriteComponent = props.favoriteComponent;
 	return (
 		<>
-			{props.movies.filter(movie => movie.Title).map((movie, index) => (
+			{props.movies.filter(movie => movie.title).map((movie, index) => (
                 <div className="movie-container">
 			
                     <div className='image-container d-flex justify-content-start m-3'>
-                        <img src={movie.Poster} alt='movie' className="align-self-center"></img>
+                        <img src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`} alt='movie' className="align-self-center"></img>
                         <div 
                             // adding function from props and adding onClick property
                             onClick={() => props.handleFavoritesClick(movie)}
@@ -17,8 +17,11 @@ const MovieList = (props) => {
                         </div>
                     </div>
 
-                    <div className="title align-self-center">
-                        <p>{movie.Title}</p>
+                    <div className="movie-info">
+                        <p>{movie.title}</p>
+                        <p>Release Date:{movie.release_date}</p>
+                        <p>Rating: {movie.vote_average}</p>
+                        <p>{movie.overview}</p>
                     </div>
 
                 </div>

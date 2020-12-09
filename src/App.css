@@ -3,6 +3,10 @@ body {
 	color: #ffffff;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 p {
 	color: black; 
 	align-items: center;
@@ -56,10 +60,10 @@ img {
 	height: 25rem;
 }
 
-.container {
-	margin: 0 auto; 
-	max-width: 1000px;
-	padding: 40px;
+.app-container {
+	/* margin: 0 auto;  */
+	/* max-width: 1000px; */
+	padding: 10px;
 }
   
 .app-title {
@@ -67,4 +71,9 @@ img {
 	text-align: center;
 }
 
+.movie-info {
+	overflow-y: auto;
+	width: 20rem;
+	height: 10rem;
+}
 

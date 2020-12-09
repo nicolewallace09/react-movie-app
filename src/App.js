@@ -12,17 +12,17 @@ const App = () => {
   // new state to hold favorites -- adding ser clicks to this array 
   const [favorites, setFavorites] = useState([]); 
   const [searchValue, setSearchValue] = useState('');
-  // calling OMDb API -- searchValue as a parameter 
+  // calling API -- searchValue as a parameter 
   const getMovieRequest = async (searchValue) => {
-    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=50241c2`; // original
-    // const url = `https://api.themoviedb.org/3/search/movie?api_key=7b642aed2489a8f6bfc80d04a2421e1c&language=en-US&query=${searchValue}&page=1&include_adult=false`;
+    // const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=50241c2`; // original
+    const url = `https://api.themoviedb.org/3/search/movie?api_key=7b642aed2489a8f6bfc80d04a2421e1c&language=en-US&query=${searchValue}&page=1&include_adult=false`;
 
 
     const response = await fetch(url); 
     const responseJson = await response.json(); 
 
-    if (responseJson.Search) {
-      setMovies(responseJson.Search); 
+    if (responseJson.results) {
+      setMovies(responseJson.results); 
     }
   };
   // passes new searchValue to our getMovieRequest
@@ -53,7 +53,7 @@ const App = () => {
   // remove a given movie from favorite state by filtering ID returning new favorites array
   const removeFavoriteMovie = (movie) => {
     const newFavoriteList = favorites.filter(
-      (favorite) => favorite.imdbID !== movie.imdbID
+      (favorite) => favorite.id !== movie.id
     ); 
     setFavorites(newFavoriteList); 
     saveToLocalStorage(newFavoriteList); 
@@ -61,12 +61,12 @@ const App = () => {
 	
 	return (
     <>
-    <div className="container">
-      <h1 className="app-title">React Movie Search</h1>
+    <div className="app-container">
+      <h1 className="app-title">Movie Search</h1>
     </div>
-		<div className='container-fluid movie-app'>
+		<div className='container movie-app'>
 			<div className='row d-flex align-items-center mt-4 mb-4'>
-				<MovieListHeading heading='Movies' />
+				{/* <MovieListHeading heading='Movies' /> */}
 				<SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
 			</div>
 			<div className='row'>
