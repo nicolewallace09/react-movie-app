@@ -2,7 +2,7 @@
   "name": "movie-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://nicolewallace09.github.io/react-movie-app",
+  "homepage": "http://nicolewallace09.github.io/react-movie-app/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
