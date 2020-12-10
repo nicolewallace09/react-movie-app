@@ -19,8 +19,8 @@ No installation, this application is to be used on the browser. If wanting to wo
 ## Usage 
 This application will allow users to add or remove movies to their Watch List.<br>
 <!-- <!-- Please view deployed application on [Heroku](https://nw-shopshop.herokuapp.com//)<br>-- -->
-<img src='client/public/images/search.png'><br>
-<img src='client/public/images/watchlist.png'>
+<img src='public/images/search.png'><br>
+<img src='public/images/watchlist.png'>
 
 ## License 
 This project is license under MIT
