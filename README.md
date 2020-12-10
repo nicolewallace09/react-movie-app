@@ -3,7 +3,7 @@
 ![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Description 
-This is an application using React as the framework and allows the user to search movies they want to watch from the Omdb API. Users will be able to save their favorites on a list to view later. 
+This is an application using React as the framework and allows the user to search movies they want to watch from the movieDB API. Users will be able to save their favorites on a list to view later on their Watch List. Their Watch List will be saved after reloading because it is saved in the local storage. 
 
 ## Table of Contents
 * [Installation](#installation)
@@ -17,9 +17,10 @@ This is an application using React as the framework and allows the user to searc
 No installation, this application is to be used on the browser. If wanting to work on contents of the application, user will need to clone the repo and install dependencies. 
 
 ## Usage 
-<!-- This application will allow users to add products to their cart either from the main page or product page. Users can then checkout using Stripe and view their order history.<br> -->
-<!-- Please view deployed application on [Heroku](https://nw-shopshop.herokuapp.com//)<br>
-<img src='client/public/images/screenshot.png'> -->
+This application will allow users to add or remove movies to their Watch List.<br>
+<!-- <!-- Please view deployed application on [Heroku](https://nw-shopshop.herokuapp.com//)<br>-- -->
+<img src='client/public/images/search.png'><br>
+<img src='client/public/images/watchlist.png'>
 
 ## License 
 This project is license under MIT

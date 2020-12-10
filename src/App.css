@@ -65,10 +65,10 @@ img {
 	box-shadow: hsl(0, 100%, 30%) 10px 10px 5px; 
 }
 
-.app-container {
-	margin: 0 auto; 
-	padding: 10px;
-}
+/* .app-container {
+	margin: 0 auto;  
+	padding: 10px; 
+} */
   
 .app-title {
 	font-size: 3.0rem;
@@ -92,4 +92,8 @@ h1 {
 .form {
 	align-content: center;
 	margin: 0 auto; 
+}
+
+.form-control {
+	border: 3px solid hsl(0, 100%, 30%);
 }
