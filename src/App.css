@@ -36,13 +36,14 @@ p {
 .overlay {
 	position: absolute;
 	background: rgba(0, 0, 0, 0.8);
-	width: 15rem;
+	width: 100%;
 	transition: 0.5s ease;
 	opacity: 0;
 	bottom: 0;
 	font-size: 15px;
 	padding: 20px;
 	text-align: center;
+
 }
 
 .movie-container {
@@ -56,22 +57,30 @@ p {
 }
 
 img {
-	width: 15rem;
+	width: 18rem;
 	height: 25rem;
 	align-items: center;
 	margin: auto;
-	border: 1px solid red;
+	/* border: 1px solid hsl(0, 100%, 30%); */
+	box-shadow: hsl(0, 100%, 30%) 10px 10px 5px; 
 }
 
 .app-container {
-	/* margin: 0 auto;  */
-	/* max-width: 1000px; */
+	margin: 0 auto; 
 	padding: 10px;
 }
   
 .app-title {
-	font-size: 4.4rem;
+	font-size: 3.0rem;
 	text-align: center;
+	padding: 20px 0 0 0;
+	text-shadow: hsl(0, 100%, 30%) 5px 5px 5px; 
+}
+
+
+h1 {
+	font-size: 2.0rem;
+	text-shadow:hsl(0, 100%, 30%) 5px 5px 5px; 
 }
 
 .movie-info {
@@ -80,3 +89,7 @@ img {
 	height: 10rem;
 }
 
+.form {
+	align-content: center;
+	margin: 0 auto; 
+}

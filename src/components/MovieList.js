@@ -19,7 +19,7 @@ const MovieList = (props) => {
                     </div>
 
                     <div className="movie-info">
-                        <p className="movie-title font-weight-bold">{movie.title}</p>
+                        <center><p className="movie-title font-weight-bold">{movie.title}</p></center>
                         <p><span className="movie-date font-weight-bold">Release Date:</span> <Moment format="MMMM D, YYYY">{movie.release_date}</Moment></p>
                         <p><span className="movie-rating font-weight-bold">Rating:</span> {movie.vote_average}</p>
                         <p><span className="movie-overview font-weight-bold">Overview:</span><br></br>

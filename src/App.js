@@ -9,15 +9,18 @@ import RemoveFavorites from './components/RemoveFavorites';
 
 const App = () => {
   const [movies, setMovies] = useState([]);
+
   // new state to hold favorites -- adding ser clicks to this array 
   const [favorites, setFavorites] = useState([]); 
+
   const [searchValue, setSearchValue] = useState('');
+
   // calling API -- searchValue as a parameter 
   const getMovieRequest = async (searchValue) => {
     // const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=50241c2`; // original
     const url = `https://api.themoviedb.org/3/search/movie?api_key=7b642aed2489a8f6bfc80d04a2421e1c&language=en-US&query=${searchValue}&page=1&include_adult=false`;
 
-
+    
     const response = await fetch(url); 
     const responseJson = await response.json(); 
 
@@ -25,6 +28,7 @@ const App = () => {
       setMovies(responseJson.results); 
     }
   };
+
   // passes new searchValue to our getMovieRequest
   useEffect(() => {
     getMovieRequest(searchValue); 
@@ -64,20 +68,24 @@ const App = () => {
     <div className="app-container">
       <h1 className="app-title">Movie Search</h1>
     </div>
+
 		<div className='container movie-app'>
-			<div className='row d-flex align-items-center mt-4 mb-4'>
+			<div className='row d-flex mt-4 mb-4'>
 				{/* <MovieListHeading heading='Movies' /> */}
 				<SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
 			</div>
+
 			<div className='row'>
         <MovieList 
           movies={movies} 
           favoriteComponent={AddFavorites} 
           handleFavoritesClick={addFavoriteMovie}/>
 			</div>
+
       <div className='row d-flex align-items-center mt-4 mb-4'>
 				<MovieListHeading heading='Watch List' />
 			</div>
+      
 			<div className='row'>
         <MovieList 
           movies={favorites} 
