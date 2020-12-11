@@ -5,10 +5,10 @@ const MovieList = (props) => {
     const FavoriteComponent = props.favoriteComponent;
 	return (
 		<>
-			{props.movies.filter(movie => movie.title).map((movie) => (
+			{props.movies.filter(movie => movie.title).map((movie, i) => (
                 <div className="movie-container">
 			
-                    <div className='image-container d-flex justify-content-start m-3'>
+                    <div className='image-container d-flex justify-content-start m-3' key={i}>
                         <img src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`} alt='movie'></img>
                         <div 
                             // adding function from props and adding onClick property
