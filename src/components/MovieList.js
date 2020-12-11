@@ -5,7 +5,7 @@ const MovieList = (props) => {
     const FavoriteComponent = props.favoriteComponent;
 	return (
 		<>
-			{props.movies.filter(movie => movie.title).map((movie, index) => (
+			{props.movies.filter(movie => movie.title).map((movie) => (
                 <div className="movie-container">
 			
                     <div className='image-container d-flex justify-content-start m-3'>
