@@ -4,7 +4,7 @@ import Moment from 'react-moment';
 const MovieList = (props) => {
     const FavoriteComponent = props.favoriteComponent;
 
-
+    // another way of rendering 
     // let moviesToRender; 
     // if (props.movies) {
     //     moviesToRender = props.movies.map((movie => (
@@ -39,7 +39,7 @@ const MovieList = (props) => {
                 {props.movies && props.movies.map((movie => (
                 <div className="movie-container">
                     
-                    <div className='image-container d-flex justify-content-start m-3'>
+                    <div className='image-container d-flex justify-content-start m-3' key={movie.id}>
                         <img src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`} alt='movie'></img>
                         <div 
                             // adding function from props and adding onClick property
