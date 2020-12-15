@@ -97,3 +97,7 @@ h1 {
 .form-control {
 	border: 3px solid hsl(0, 100%, 30%);
 }
+
+.results {
+	padding: 15px; 
+}

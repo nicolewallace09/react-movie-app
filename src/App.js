@@ -70,10 +70,17 @@ const App = () => {
     </div>
 
 		<div className='container movie-app'>
+
 			<div className='row d-flex mt-4 mb-4'>
 				{/* <MovieListHeading heading='Movies' /> */}
 				<SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
-			</div>
+      </div>
+
+      <div className="results row d-flex mt-4 mb-4">
+        <h1>{movies.length ? `Viewing ${movies.length} results` : 'Search A Movie To View Results' }
+        </h1>
+      </div>
+			
 
 			<div className='row'>
         <MovieList 
@@ -82,7 +89,7 @@ const App = () => {
           handleFavoritesClick={addFavoriteMovie}/>
 			</div>
 
-      <div className='row d-flex align-items-center mt-4 mb-4'>
+      <div className='row d-flex mt-4 mb-4'>
 				<MovieListHeading heading='Watch List' />
 			</div>
       
