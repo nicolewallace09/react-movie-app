@@ -39,7 +39,7 @@ const MovieList = (props) => {
                 {props.movies && props.movies.map((movie => (
                 <div className="movie-container">
                     
-                    <div className='image-container d-flex justify-content-start m-3' key={movie.id}>
+                    <div className='image-container d-flex justify-content-start m-3'>
                         <img src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`} alt='movie'></img>
                         <div 
                             // adding function from props and adding onClick property
