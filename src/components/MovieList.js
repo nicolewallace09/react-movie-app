@@ -41,12 +41,12 @@ const MovieList = (props) => {
                     
                     <div className='image-container d-flex justify-content-start m-3'>
                         <img src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`} alt='movie'></img>
-                        <div 
+                        {/* <div 
                             // adding function from props and adding onClick property
                             onClick={() => props.handleFavoritesClick(movie)}
                             className='overlay d-flex align-items-center justify-content-center'>
                             <FavoriteComponent/>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="movie-info" key={movie.id}>
