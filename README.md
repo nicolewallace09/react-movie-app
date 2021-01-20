@@ -3,7 +3,7 @@
 ![Github licence](http://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Description 
-Welcome to The Shoppies: Movie awards for entrepreneurs! This application was build to help Shopify manager their movie nominations. This application allows users to search for movies using the OMBD api and allow users to save the movies they want to nominate. The application is built using React, Javascript, HTML, and CSS. 
+This is an application using React as the framework and allows the user to search movies they want to watch from the OMDB API. 
 
 ## Table of Contents
 * [Installation](#installation)
@@ -19,7 +19,7 @@ No installation, this application is to be used on the browser. If wanting to wo
 ## Usage 
 This application will allow users to add or remove movies to their nomination list.<br>
 <!-- <!-- Please view deployed application on [Heroku](https://nw-shopshop.herokuapp.com//)<br>-- -->
-<!-- <img src='public/images/search.png'><br> -->
+<img src='public/images/search.png'><br>
 
 ## License 
 This project is license under MIT
