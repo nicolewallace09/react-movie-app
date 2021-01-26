@@ -3,9 +3,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import MovieList from "./components/MovieList";
 import MovieListHeading from './components/MovieListHeading';
-import SearchBox from './components/SearchBox';
+// import SearchBox from './components/SearchBox';
 import AddFavorites from './components/AddFavorites';
 import RemoveFavorites from './components/RemoveFavorites'; 
+import NavBar from './components/NavBar'; 
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -66,14 +67,14 @@ const App = () => {
 	return (
     <>
     <div className="app-container">
-      <h1 className="app-title">Movie Search</h1>
+      <NavBar searchValue={searchValue} setSearchValue={setSearchValue} />
     </div>
 
-		<div className='container movie-app'>
+		<div className='container-fluid movie-app'>
 
 			<div className='row d-flex mt-4 mb-4'>
 				{/* <MovieListHeading heading='Movies' /> */}
-				<SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
+				{/* <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} /> */}
       </div>
 
       <div className="results row d-flex mt-4 mb-4">
@@ -89,7 +90,7 @@ const App = () => {
           handleFavoritesClick={addFavoriteMovie}/>
 			</div>
 
-      <div className='row d-flex mt-4 mb-4'>
+      {/* <div className='row d-flex mt-4 mb-4'>
 				<MovieListHeading heading='Watch List' />
 			</div>
       
@@ -98,7 +99,7 @@ const App = () => {
           movies={favorites} 
           handleFavoritesClick={removeFavoriteMovie}
           favoriteComponent={RemoveFavorites} /> 
-			</div>
+			</div> */}
 		</div>
     </>
 	);
