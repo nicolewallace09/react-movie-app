@@ -6,7 +6,10 @@ const MovieList = (props) => {
 
 	return (
 		<>
-            {props.movies && props.movies.map((movie => (
+            {/* {props.movies && props.movies.map((movie => ( */}
+            { props.movies.map((movie,index) => { 
+                if (movie) {
+                return (
 	
                 <div className="movie-container" key={movie.id}>
                 
@@ -25,7 +28,8 @@ const MovieList = (props) => {
                     </div>
 
                 </div> 
-            )))}
+                )} return null
+            })}
 
 
   
