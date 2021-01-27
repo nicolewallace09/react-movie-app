@@ -5,7 +5,7 @@ const NavBar = (props) => {
         <>
         <nav class="navbar">
             <div class="container-fluid">
-                <a class="navbar-brand">Movie App</a>
+                <p class="navbar-brand">Movie App</p>
                 <form class="d-flex input-group-lg">
                 <input class="form-control me-2" 
                 type="search" 

@@ -92,8 +92,6 @@ img {
 h1 {
 	font-size: 1.8rem;
 	text-shadow: #ffcc00 2px 2px 10px; 
-	align-content: center;
-	margin: 0 auto; 
 }
 
 .movie-info {
@@ -108,9 +106,9 @@ h1 {
 	width: 20rem;
 }
 
-.results {
+/* .results {
 	padding: 15px; 
-}
+} */
 
 .navbar-brand {
 	font-size: 2rem;
