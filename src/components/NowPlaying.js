@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Moment from 'react-moment'; 
 import { StarFill } from 'react-bootstrap-icons';
-import { Link } from 'react-router-dom';
 
 const NowPlaying = () => {
 
