@@ -7,6 +7,7 @@ import MovieListHeading from './components/MovieListHeading';
 import AddFavorites from './components/AddFavorites';
 import RemoveFavorites from './components/RemoveFavorites'; 
 import NavBar from './components/NavBar'; 
+import NowPlaying from './components/NowPlaying'; 
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -72,9 +73,12 @@ const App = () => {
 
 		<div className='container-fluid movie-app'>
 
+      <div className="title-one">
+        <h1 className="now-playing">Now Playing</h1>
+      </div>
+
 			<div className='row d-flex mt-4 mb-4'>
-				{/* <MovieListHeading heading='Movies' /> */}
-				{/* <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} /> */}
+        <NowPlaying></NowPlaying>
       </div>
 
       <div className="results row d-flex mt-4 mb-4">
