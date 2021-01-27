@@ -7,7 +7,7 @@ const ComingSoon = () => {
 
 
     const getMovieRequest = async () => { 
-        const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=7b642aed2489a8f6bfc80d04a2421e1c&language=en-US&page=1`;
+        const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=7b642aed2489a8f6bfc80d04a2421e1c&language=en-US&page=1`;
 
         const response = await fetch(url); 
         const responseJson = await response.json(); 
