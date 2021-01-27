@@ -9,7 +9,7 @@ const App = () => {
     <Router>
     <>
       <Switch>
-        <Route exact path='/' component={Homepage} />
+        <Route exact path='/react-movie-app' component={Homepage} />
       </Switch>
     </>
   </Router>
