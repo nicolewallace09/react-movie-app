@@ -6,10 +6,7 @@ const MovieList = (props) => {
 
 	return (
 		<>
-            {/* {props.movies && props.movies.map((movie => ( */}
-            { props.movies.map((movie,index) => { 
-                if (movie) {
-                return (
+            {props.movies && props.movies.map((movie => (
 	
                 <div className="movie-container" key={movie.id}>
                 
@@ -27,9 +24,8 @@ const MovieList = (props) => {
                         <a href={`https://api.themoviedb.org/3/movie/${movie.id}/reviews?api_key=7b642aed2489a8f6bfc80d04a2421e1c&language=en-US&page=1`} alt="link-to-reviews">View Reviews</a>
                     </div>
 
-                </div> 
-                )} return null
-            })}
+                </div>
+            )))}
 
 
   
