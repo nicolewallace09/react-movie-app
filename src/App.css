@@ -13,6 +13,14 @@ p {
 	font-size: 0.9rem;
 }
 
+.movie-date, .movie-date, .movie-rating, .movie-overview, .icon{
+	color: #ffcc00; 
+}
+
+.movie-title {
+	font-size: 1.1rem;
+}
+
 .movie-app {
 	margin: 10px; 
 }
@@ -85,8 +93,9 @@ h1 {
 
 .movie-info {
 	overflow-y: auto;
-	width: 20rem;
-	height: 10rem;
+	width: 15rem;
+	height: 8rem;
+	margin: 10px;
 }
 
 .form-control {
