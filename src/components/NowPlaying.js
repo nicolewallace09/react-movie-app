@@ -38,7 +38,7 @@ const NowPlaying = () => {
                 <p><span className="movie-date font-weight-bold">Release Date:</span> <Moment format="MMMM D, YYYY">{movie.release_date}</Moment></p>
                 <p><span className="movie-rating font-weight-bold">Rating:</span> {movie.vote_average} <span className="movie-rating font-weight-bold"><StarFill/></span></p>
                 <p><span className="movie-overview font-weight-bold">Overview:</span> {movie.overview}</p>
-                <Link to="/moviepage">Movie App</Link>
+                <a href={`https://api.themoviedb.org/3/movie/${movie.id}/reviews?api_key=7b642aed2489a8f6bfc80d04a2421e1c&language=en-US&page=1`} alt="link-to-reviews">View Reviews</a>
             </div>
 
         </div> 
