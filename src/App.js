@@ -8,7 +8,7 @@ import AddFavorites from './components/AddFavorites';
 // import RemoveFavorites from './components/RemoveFavorites'; 
 import NavBar from './components/NavBar'; 
 import NowPlaying from './components/NowPlaying'; 
-import ComingSoon from './components/ComingSoon'; 
+import Popular from './components/Popular'
 
 
 const App = () => {
@@ -75,25 +75,8 @@ const App = () => {
 
 		<div className='container-fluid movie-app'>
 
-      <div className="title-one">
-        <h1 className="now-playing">Now Playing</h1>
-      </div>
-
-			<div className='row d-flex mt-4 mb-4'>
-        <NowPlaying></NowPlaying>
-      </div>
-
-      <div className="title-one">
-        <h1 className="now-playing">Coming Soon</h1>
-      </div>
-
-			<div className='row d-flex mt-4 mb-4'>
-        <ComingSoon></ComingSoon>
-      </div>
-
       <div className="results row d-flex mt-4 mb-4">
-        <h1>{movies.length ? `Viewing ${movies.length} results` : 'Search A Movie To View Results' }
-        </h1>
+        <h1>{movies.length ? `Viewing ${movies.length} results` : 'Search A Movie To View Results' }</h1>
       </div>
 			
 
@@ -103,6 +86,22 @@ const App = () => {
           favoriteComponent={AddFavorites} 
           handleFavoritesClick={addFavoriteMovie}/>
 			</div>
+
+      <div className="title-one">
+        <h1 className="now-playing">Now Playing</h1>
+      </div>
+
+			<div className='row d-flex mt-4 mb-4'>
+        <NowPlaying></NowPlaying>
+      </div>
+
+      <div className="title-one">
+        <h1 className="now-playing">Popular</h1>
+      </div>
+
+			<div className='row d-flex mt-4 mb-4'>
+        <Popular></Popular>
+      </div>
 
       {/* <div className='row d-flex mt-4 mb-4'>
 				<MovieListHeading heading='Watch List' />

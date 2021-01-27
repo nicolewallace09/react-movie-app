@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Moment from 'react-moment'; 
 
-const ComingSoon = () => {
+const Popular = () => {
 
     const [movies, setMovies] = useState([]);
 
 
     const getMovieRequest = async () => { 
-        const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=7b642aed2489a8f6bfc80d04a2421e1c&language=en-US&page=1`;
+        const url = `https://api.themoviedb.org/3/movie/popular?api_key=7b642aed2489a8f6bfc80d04a2421e1c&language=en-US&page=1`;
 
         const response = await fetch(url); 
         const responseJson = await response.json(); 
@@ -25,8 +25,10 @@ const ComingSoon = () => {
                 {movies && movies.map((movie => ( 
                     <div className="movie-container" key={movie.id}>
                     
-                    <div className='image-container d-flex justify-content-start m-3'>
-                        <img src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`} alt='movie'></img> 
+                    <div className='image-container d-flex justify-content-center m-3'>
+                        <a href={`https://www.themoviedb.org/movie/${movie.id}`} alt="link-to-site">
+                            <img src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`} alt='movie'/>
+                        </a>
                     </div>
 
                     <div className="movie-info">
@@ -47,4 +49,4 @@ const ComingSoon = () => {
 	);
 };
 
-export default ComingSoon;
+export default Popular;

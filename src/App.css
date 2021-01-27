@@ -10,6 +10,11 @@ body {
 p {
 	color: #ffffff; 
 	align-items: center;
+	font-size: 0.9rem;
+}
+
+.movie-app {
+	margin: 10px; 
 }
 
 .movie-app > .row {
@@ -47,8 +52,8 @@ p {
 }
 
 .movie-container {
-	padding: 1rem 2rem; 
-	border-radius: 10px;
+	padding: 1rem 1rem; 
+	border-radius: 5px;
 	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
 	margin-bottom: 1rem;
 	background-color: #262626;
@@ -57,11 +62,12 @@ p {
 }
 
 img {
-	width: 18rem;
-	height: 25rem;
-	align-items: center;
-	margin: auto;
-	/* border: 1px solid hsl(0, 100%, 30%); */
+	width: 10rem;
+	height: 15rem;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+	border: 1px solid #ffcc00;
 	box-shadow:   #1a1a1a 5px 5px 5px; 
 }
 
@@ -99,4 +105,5 @@ h1 {
 
 .navbar {
 	background-color:#262626;
+	padding: 15px;
 }

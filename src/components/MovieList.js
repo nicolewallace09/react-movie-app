@@ -10,16 +10,10 @@ const MovieList = (props) => {
         moviesToRender = props.movies.map((movie => (
             <div className="movie-container" key={movie.id}>
                 
-                <div className='image-container d-flex justify-content-start m-3'>
+                <div className='image-container d-flex justify-content-center m-3'>
                     <a href={`https://www.themoviedb.org/movie/${movie.id}`} alt="link-to-site">
                         <img src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`} alt='movie'/>
                     </a>
-                    {/* <div 
-                        // adding function from props and adding onClick property
-                        onClick={() => props.handleFavoritesClick(movie)}
-                        className='overlay d-flex align-items-center justify-content-center'>
-                        <FavoriteComponent/>
-                    </div> */}
                 </div>
 
                 <div className="movie-info">
