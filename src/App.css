@@ -18,8 +18,12 @@ p {
 }
 
 a {
-	color: #ffcc00; 
-	font-style: italic; 
+	color: #ffcc00;
+}
+
+a:hover {
+	color: #ffffff;
+	text-decoration: none;
 }
 
 .movie-title {
@@ -105,10 +109,6 @@ h1 {
 	border: 3px solid #ffcc00;
 	width: 20rem;
 }
-
-/* .results {
-	padding: 15px; 
-} */
 
 .navbar-brand {
 	font-size: 2rem;
