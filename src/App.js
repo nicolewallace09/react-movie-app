@@ -4,8 +4,8 @@ import './App.css';
 import MovieList from "./components/MovieList";
 import NavBar from './components/NavBar'; 
 import NowPlaying from './components/NowPlaying'; 
-import Popular from './components/Popular'
-
+import Popular from './components/Popular';
+import TopRated from './components/TopRated';
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -62,6 +62,14 @@ const App = () => {
 
 			<div className='row d-flex mt-4 mb-4'>
         <Popular></Popular>
+      </div>
+
+      <div className="title-one">
+        <h1 className="now-playing">Top Rated</h1>
+      </div>
+
+			<div className='row d-flex mt-4 mb-4'>
+        <TopRated></TopRated>
       </div>
 
 		</div>

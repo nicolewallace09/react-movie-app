@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Moment from 'react-moment'; 
 import { StarFill } from 'react-bootstrap-icons';
 
-const Popular = () => {
+const TopRated = () => {
 
     const [movies, setMovies] = useState([]);
 
 
     const getMovieRequest = async () => { 
-        const url = `https://api.themoviedb.org/3/movie/popular?api_key=7b642aed2489a8f6bfc80d04a2421e1c&language=en-US&page=1`;
+        const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=7b642aed2489a8f6bfc80d04a2421e1c&language=en-US&page=1`;
 
         const response = await fetch(url); 
         const responseJson = await response.json(); 
@@ -42,11 +42,8 @@ const Popular = () => {
 
         </div> 
         )))}
-
-
-          
 		</>
 	);
 };
 
-export default Popular;
+export default TopRated;

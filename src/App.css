@@ -13,8 +13,13 @@ p {
 	font-size: 0.9rem;
 }
 
-.movie-date, .movie-date, .movie-rating, .movie-overview, .icon{
+.movie-date, .movie-date, .movie-rating, .movie-overview {
 	color: #ffcc00; 
+}
+
+a {
+	color: #ffcc00; 
+	font-style: italic; 
 }
 
 .movie-title {
