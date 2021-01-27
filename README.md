@@ -20,6 +20,7 @@ No installation, this application is to be used on the browser. If wanting to wo
 This application will allow users to search for movies and will be able to click on them to view their MovieDB page.<br>
 Please view deployed application on [Github Pages](https://nicolewallace09.github.io/react-movie-app/)
 <img src='public/images/search.png'><br>
+<img src='public/images/headers.png'><br>
 
 ## License 
 This project is license under MIT
