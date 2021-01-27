@@ -3,11 +3,11 @@ import React from 'react';
 const NavBar = (props) => {
 	return (
         <>
-        <nav class="navbar">
-            <div class="container-fluid">
-                <p class="navbar-brand">Movie App</p>
-                <form class="d-flex input-group-lg">
-                <input class="form-control me-2" 
+        <nav className="navbar">
+            <div className="container-fluid">
+                <p className="navbar-brand">Movie App</p>
+                <form className="d-flex input-group-lg">
+                <input className="form-control me-2" 
                 type="search" 
                 placeholder="Find a movie" 
                 aria-label="Search"
