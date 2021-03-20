@@ -12,7 +12,7 @@ const NavBar = (props) => {
                 placeholder="Find a movie" 
                 aria-label="Search"
                 value={props.value}
-				onChange={(event) => props.setSearchValue(event.target.value)}></input>
+				onChange={(event) => props.setSearch(event.target.value)}></input>
                 </form>
             </div>
         </nav>

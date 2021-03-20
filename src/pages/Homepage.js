@@ -6,18 +6,20 @@ import Popular from '../components/Popular';
 import TopRated from '../components/TopRated';
 
 const Homepage = () => {
+    // initial state, set state of movies array 
     const [movies, setMovies] = useState([]);
   
-    const [searchValue, setSearchValue] = useState('');
+    // initial state, set state of search string 
+    const [search, setSearch] = useState('');
   
     // calling API -- searchValue as a parameter 
-    const getMovieRequest = async (searchValue) => {
-      const url = `https://api.themoviedb.org/3/search/movie?api_key=7b642aed2489a8f6bfc80d04a2421e1c&language=en-US&query=${searchValue}&page=1&include_adult=false`;
+    const searchMovie = async (searchTerm) => {
+      const url = `https://api.themoviedb.org/3/search/movie?api_key=7b642aed2489a8f6bfc80d04a2421e1c&language=en-US&query=${searchTerm}&page=1&include_adult=false`;
   
-      
       const response = await fetch(url); 
       const responseJson = await response.json(); 
   
+      // API JSON -- results
       if (responseJson.results) {
         setMovies(responseJson.results); 
       }
@@ -25,24 +27,23 @@ const Homepage = () => {
   
     // passes new searchValue to our getMovieRequest
     useEffect(() => {
-      getMovieRequest(searchValue); 
-    }, [searchValue]); 
+      searchMovie(search); 
+    }, [search]); 
       
       return (
       <>
         <div className="app-container">
-          <NavBar searchValue={searchValue} setSearchValue={setSearchValue} />
+          <NavBar search={search} setSearch={setSearch} />
         </div>
   
         <div className='container-fluid movie-app'>
   
           <div className="results">
-            <h1>{movies.length ? `Viewing ${movies.length} results for "${searchValue}"` : null }</h1>
+            <h1>{movies.length ? `Viewing ${movies.length} results for "${search}"` : null }</h1>
           </div>
           
           <div className='row'>
-            <MovieList 
-              movies={movies} />
+            <MovieList movies={movies} />
           </div>
   
           <div className="title-one">
@@ -50,23 +51,23 @@ const Homepage = () => {
           </div>
   
           <div className='row d-flex mt-4 mb-4'>
-            <NowPlaying></NowPlaying>
+            <NowPlaying/>
           </div>
   
           <div className="title-two">
-            <h1 className="now-playing">Popular</h1>
+            <h1 className="popular">Popular</h1>
           </div>
   
           <div className='row d-flex mt-4 mb-4'>
-            <Popular></Popular>
+            <Popular/>
           </div>
   
           <div className="title-three">
-            <h1 className="now-playing">Top Rated</h1>
+            <h1 className="top-rated">Top Rated</h1>
           </div>
   
           <div className='row d-flex mt-4 mb-4'>
-            <TopRated></TopRated>
+            <TopRated/>
           </div>
         </div>
       </>
