@@ -14,7 +14,7 @@ const Homepage = () => {
   
     // calling API -- searchValue as a parameter 
     const searchMovie = async (searchTerm) => {
-      const url = `https://api.themoviedb.org/3/search/movie?api_key=7b642aed2489a8f6bfc80d04a2421e1c&language=en-US&query=${searchTerm}&page=1&include_adult=false`;
+      const url = `https://api.themoviedb.org/3/search/movie?api_key=1c972e8d255db8208d4573207d1e9b62&language=en-US&query=${searchTerm}&page=1&include_adult=false`;
   
       const response = await fetch(url); 
       const responseJson = await response.json(); 
